@@ -1,58 +1,76 @@
 /* ==========================================================================
    Award section (THE BEAUTY EXPERTS 2026) - append to css/components.css
    Used on: / (top), /artmake/
+   Background: add theme class "bg-light" on the section when neighbors are white
    ========================================================================== */
-/* background: add theme class "bg-light" on the section when neighbors are white */
 .award-card {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-md);
-}
-
-.award-card__image img {
-  display: block;
-  width: 100%;
-  height: auto;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-  object-position: center 20%;
+  padding: var(--spacing-xl) var(--spacing-md);
+  text-align: center;
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
   border-radius: 8px;
 }
 
+.award-card__emblem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  margin: 0 auto var(--spacing-md);
+  font-size: var(--font-size-3xl);
+  color: var(--color-secondary);
+  border: 1px solid var(--color-secondary);
+  border-radius: 50%;
+}
+
 .award-card__label {
-  margin: 0 0 var(--spacing-xs);
+  margin: 0 0 var(--spacing-sm);
   font-size: var(--font-size-ss);
   letter-spacing: 0.12em;
   color: var(--color-secondary);
 }
 
 .award-card__title {
-  margin: 0 0 var(--spacing-sm);
+  margin: 0 0 var(--spacing-xs);
   font-size: var(--font-size-lg);
   font-weight: 700;
   line-height: 1.6;
   color: var(--color-primary);
 }
 
+.award-card__category {
+  margin: 0;
+  font-size: var(--font-size-md);
+  color: var(--color-primary);
+}
+
 .award-card__rank {
-  margin-left: 0.3em;
-  font-size: var(--font-size-3xl);
-  line-height: 1;
+  margin: var(--spacing-xs) 0 var(--spacing-md);
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--color-primary);
+}
+
+.award-card__rank-unit {
+  margin-left: 0.1em;
+  font-size: var(--font-size-2xl);
 }
 
 .award-card__text {
   margin: 0 0 var(--spacing-md);
   font-size: var(--font-size-sm);
   line-height: 1.9;
+  text-align: left;
 }
 
 .award-list {
   margin: 0 0 var(--spacing-md);
-  padding: var(--spacing-sm);
+  padding: var(--spacing-sm) 0 0;
   list-style: none;
-  background-color: var(--color-bg);
-  border: 1px solid var(--color-border);
-  border-radius: 8px;
+  text-align: left;
+  border-top: 1px solid var(--color-border);
 }
 
 .award-list li {
@@ -80,14 +98,4 @@
   font-size: var(--font-size-sm);
   color: var(--color-primary);
   text-decoration: underline;
-}
-
-/* News detail: image inside post body */
-.news-award-image {
-  display: block;
-  width: 100%;
-  max-width: 480px;
-  height: auto;
-  margin: var(--spacing-md) auto;
-  border-radius: 8px;
 }
